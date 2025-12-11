@@ -100,7 +100,8 @@ main {
 
 /* Visualization details (accessible alternatives) */
 .visualization-details {
-  margin-top: var(--space-md);
+  margin-top: 0;
+  margin-bottom: var(--space-lg);
   padding: var(--space-md);
   background: rgba(61, 26, 61, 0.05);
   border-radius: var(--border-radius-sm);
