@@ -1,0 +1,270 @@
+/**
+ * What Do You Eat - Layout Styles
+ * Grid, positioning, and structural layout
+ * Copyright (c) 2025 avgelix
+ * Licensed under MIT License
+ */
+
+/* ==================== MAIN LAYOUT STRUCTURE ==================== */
+/* Header */
+.site-header {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-xxl) var(--page-margin) var(--space-xl);
+  text-align: center;
+}
+
+/* Main content area */
+main {
+  min-height: 60vh;
+}
+
+/* Footer */
+.site-footer {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-xxl) var(--page-margin) var(--space-xl);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-xxl);
+}
+
+.site-footer p {
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-size-small);
+  color: var(--color-text-primary);
+  opacity: 0.7;
+}
+
+.site-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== STORY SECTIONS ==================== */
+.story-section {
+  max-width: var(--content-max-width);
+  margin: 0 auto var(--space-xxl);
+  padding: 0 var(--page-margin);
+}
+
+/* First section has less top spacing */
+.story-section:first-of-type {
+  margin-top: var(--space-xl);
+}
+
+/* Call to action section gets special treatment */
+.cta-section {
+  margin-top: var(--space-xxl);
+  margin-bottom: var(--space-xxl);
+}
+
+/* ==================== CONTENT CONTAINERS ==================== */
+/* Observable visualization containers */
+.observable-container {
+  margin: var(--space-xl) 0;
+}
+
+.observable-embed {
+  margin: var(--space-lg) 0;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Placeholder for visualizations during development */
+.placeholder-chart {
+  width: 100%;
+  min-height: 400px;
+  background: rgba(244, 185, 66, 0.1);
+  border: 2px dashed var(--color-accent);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.placeholder-chart p {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--space-sm);
+}
+
+.placeholder-instructions {
+  font-size: var(--font-size-small) !important;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Visualization details (accessible alternatives) */
+.visualization-details {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(61, 26, 61, 0.05);
+  border-radius: var(--border-radius-sm);
+}
+
+.visualization-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: var(--space-xs);
+  user-select: none;
+}
+
+.visualization-details summary:hover {
+  color: var(--color-link-hover);
+}
+
+.visualization-details p {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.data-download {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-small);
+  text-decoration: underline;
+}
+
+/* ==================== GRID LAYOUTS ==================== */
+/* Two-column layout for comparison */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+
+/* Three-column layout for cards */
+.three-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+  .two-column,
+  .three-column {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+/* ==================== FLEXBOX UTILITIES ==================== */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+
+/* ==================== CARDS ==================== */
+.card {
+  background: rgba(255, 255, 255, 0.5);
+  padding: var(--space-lg);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* ==================== SPACING UTILITIES ==================== */
+.container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-margin);
+}
+
+.full-width {
+  max-width: 100%;
+  width: 100%;
+}
+
+.section-spacing {
+  margin-bottom: var(--space-xxl);
+}
+
+/* ==================== RESPONSIVE LAYOUT ==================== */
+@media (max-width: 768px) {
+  .site-header {
+    padding: var(--space-xl) var(--page-margin) var(--space-lg);
+  }
+  
+  .story-section {
+    margin-bottom: var(--space-xl);
+  }
+  
+  .observable-embed {
+    min-height: 300px;
+  }
+  
+  .placeholder-chart {
+    min-height: 300px;
+    padding: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: var(--space-lg) var(--page-margin-mobile);
+  }
+  
+  .story-section {
+    padding: 0 var(--page-margin-mobile);
+  }
+  
+  .site-footer {
+    padding: var(--space-xl) var(--page-margin-mobile) var(--space-lg);
+  }
+  
+  .card {
+    padding: var(--space-md);
+  }
+}
+
+/* ==================== SCROLL BEHAVIOR ==================== */
+/* Smooth scroll padding for anchor links (accounts for header if needed) */
+html {
+  scroll-padding-top: var(--space-lg);
+}
+
+/* Fade-in animation for sections (optional - can be triggered via JS) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
