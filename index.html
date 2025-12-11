@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exploring how identical foods differ across countries - a data story about conscious eating in a globalized world.">
+    <title>What Do You Eat? | A Data Story About Food</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header">
+        <h1 class="site-title">What Do You Eat?</h1>
+        <p class="site-subtitle">A data story about conscious eating in a globalized world</p>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main id="main-content">
+
+        <!-- ========== INTRODUCTION SECTION ========== -->
+        <article class="story-section" id="introduction">
+            <h2>This is a story about food and invisible differences.</h2>
+            
+            <p>
+                <!-- Replace with your hook: Why should readers care? -->
+                Why? Because millions of people eat what they think is the "same" food, 
+                but <span class="highlight">ingredients tell a different story</span>.
+            </p>
+
+            <p>
+                <!-- Replace with your personal story: Italy → US move -->
+                In 2021, I moved from Italy to the United States and noticed something unexpected. 
+                Despite eating the same diet, my health changed. What I discovered was...
+            </p>
+
+            <p>
+                <!-- Transition to the investigation -->
+                This led me to investigate: <em>How different are "identical" foods across countries?</em>
+            </p>
+        </article>
+
+        <!-- ========== THE SETUP: COUNTRIES & DATA ========== -->
+        <article class="story-section" id="methodology-intro">
+            <h2>Five Countries. Five Continents. 50 Food Categories.</h2>
+
+            <p>
+                <!-- Explain your methodology briefly -->
+                To answer this question, I analyzed over 2,000 products from:
+            </p>
+
+            <!-- Country list with flags -->
+            <ul class="country-list">
+                <li>🇺🇸 <strong>United States</strong> (Americas)</li>
+                <li>🇮🇹 <strong>Italy</strong> (Europe)</li>
+                <li>🇿🇦 <strong>South Africa</strong> (Africa)</li>
+                <li>🇯🇵 <strong>Japan</strong> (Asia)</li>
+                <li>🇳🇿 <strong>New Zealand</strong> (Oceania)</li>
+            </ul>
+
+            <p>
+                <!-- Mention data source -->
+                All data comes from <a href="https://world.openfoodfacts.org/" class="highlight" target="_blank" rel="noopener">Open Food Facts</a>, 
+                a free and open database of food products worldwide.
+            </p>
+        </article>
+
+        <!-- ========== VISUALIZATION 1: INGREDIENT COUNTS ========== -->
+        <article class="story-section" id="viz-ingredient-count">
+            <h2>The Same Food. Different Ingredient Lists.</h2>
+
+            <p>
+                <!-- Setup the first visualization -->
+                Let's start with something simple: How many ingredients are in common foods?
+            </p>
+
+            <!-- Observable embed container -->
+            <div class="observable-container" role="region" aria-labelledby="viz-ingredients-title">
+                <h3 id="viz-ingredients-title" class="visualization-title">Average Ingredient Count by Country</h3>
+                
+                <!-- Replace with your Observable embed -->
+                <div id="observablehq-ingredients-chart" class="observable-embed">
+                    <div class="placeholder-chart">
+                        <p>📊 Observable visualization will be embedded here</p>
+                        <p class="placeholder-instructions">
+                            Replace this div with your Observable embed code
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Text alternative for accessibility -->
+                <details class="visualization-details">
+                    <summary>View data summary</summary>
+                    <p>
+                        <!-- Replace with actual findings -->
+                        Key findings: The United States products average 15 ingredients per item, 
+                        while Italy averages 8 ingredients. Japan shows the lowest with 6 ingredients on average.
+                    </p>
+                    <a href="data/products.json" download class="data-download">Download full dataset (JSON)</a>
+                </details>
+            </div>
+
+            <p>
+                <!-- Explain what the chart reveals -->
+                What this reveals is...
+            </p>
+        </article>
+
+        <!-- ========== VISUALIZATION 2: FOOD CATEGORY COMPLEXITY ========== -->
+        <article class="story-section" id="viz-category-complexity">
+            <h2>Some Categories Are More Complex Than Others</h2>
+
+            <p>
+                <!-- Introduce category analysis -->
+                Not all food categories are equal. Some are highly processed, others remain simple.
+            </p>
+
+            <!-- Observable embed container -->
+            <div class="observable-container" role="region" aria-labelledby="viz-category-title">
+                <h3 id="viz-category-title" class="visualization-title">Food Category Complexity</h3>
+                
+                <!-- Replace with your Observable embed -->
+                <div id="observablehq-category-chart" class="observable-embed">
+                    <div class="placeholder-chart">
+                        <p>📊 Observable visualization will be embedded here</p>
+                        <p class="placeholder-instructions">
+                            Replace this div with your Observable embed code
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Text alternative -->
+                <details class="visualization-details">
+                    <summary>View data summary</summary>
+                    <p>
+                        <!-- Replace with actual findings -->
+                        Key findings: Snacks and desserts show the highest complexity (avg 18 ingredients), 
+                        while fresh produce remains simple (avg 3 ingredients).
+                    </p>
+                </details>
+            </div>
+
+            <p>
+                <!-- Analysis and interpretation -->
+                This tells us that...
+            </p>
+        </article>
+
+        <!-- ========== VISUALIZATION 3: ADDITIVES ANALYSIS ========== -->
+        <article class="story-section" id="viz-additives">
+            <h2>The Additive Story</h2>
+
+            <p>
+                <!-- Introduce additives -->
+                Beyond ingredient count, there's another hidden dimension: <span class="highlight">food additives</span>.
+            </p>
+
+            <!-- Observable embed container -->
+            <div class="observable-container" role="region" aria-labelledby="viz-additives-title">
+                <h3 id="viz-additives-title" class="visualization-title">Additive Usage Across Countries</h3>
+                
+                <!-- Replace with your Observable embed -->
+                <div id="observablehq-additives-chart" class="observable-embed">
+                    <div class="placeholder-chart">
+                        <p>📊 Observable visualization will be embedded here</p>
+                        <p class="placeholder-instructions">
+                            Replace this div with your Observable embed code
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Text alternative -->
+                <details class="visualization-details">
+                    <summary>View data summary</summary>
+                    <p>
+                        <!-- Replace with actual findings -->
+                        Key findings: Products in the United States contain an average of 7.2 additives, 
+                        while Italian products average 3.1 additives.
+                    </p>
+                </details>
+            </div>
+
+            <p>
+                <!-- Explain what this means -->
+                These additives serve different purposes: preservatives, colorants, emulsifiers...
+            </p>
+        </article>
+
+        <!-- ========== INTERACTIVE TOOL: COMPARISON ========== -->
+        <article class="story-section" id="comparison-tool">
+            <h2>Compare For Yourself</h2>
+
+            <p>
+                <!-- Invite readers to explore -->
+                Want to see how specific foods compare? Use the tool below to explore the data yourself.
+            </p>
+
+            <!-- Comparison tool container -->
+            <div class="comparison-tool" role="region" aria-labelledby="comparison-title">
+                <h3 id="comparison-title" class="tool-title">Product Comparison Tool</h3>
+                
+                <!-- Tool interface -->
+                <div class="comparison-tool__interface">
+                    <!-- Country selector 1 -->
+                    <div class="comparison-tool__selector">
+                        <label for="country-1">Select Country 1:</label>
+                        <select id="country-1" class="comparison-tool__dropdown">
+                            <option value="">Choose a country...</option>
+                            <option value="us">United States</option>
+                            <option value="it">Italy</option>
+                            <option value="za">South Africa</option>
+                            <option value="jp">Japan</option>
+                            <option value="nz">New Zealand</option>
+                        </select>
+                    </div>
+
+                    <!-- Country selector 2 -->
+                    <div class="comparison-tool__selector">
+                        <label for="country-2">Select Country 2:</label>
+                        <select id="country-2" class="comparison-tool__dropdown">
+                            <option value="">Choose a country...</option>
+                            <option value="us">United States</option>
+                            <option value="it">Italy</option>
+                            <option value="za">South Africa</option>
+                            <option value="jp">Japan</option>
+                            <option value="nz">New Zealand</option>
+                        </select>
+                    </div>
+
+                    <!-- Food category selector -->
+                    <div class="comparison-tool__selector">
+                        <label for="food-category">Select Food Category:</label>
+                        <select id="food-category" class="comparison-tool__dropdown">
+                            <option value="">Choose a category...</option>
+                            <option value="bread">Bread</option>
+                            <option value="yogurt">Yogurt</option>
+                            <option value="pasta">Pasta</option>
+                            <!-- Add more categories as needed -->
+                        </select>
+                    </div>
+
+                    <!-- Compare button -->
+                    <button class="comparison-tool__button" id="compare-btn">
+                        Compare Products
+                    </button>
+                </div>
+
+                <!-- Results container -->
+                <div id="comparison-results" class="comparison-tool__results" aria-live="polite">
+                    <p class="placeholder-message">Select two countries and a food category to compare products.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- ========== INTERACTIVE TOOL: SEARCH ========== -->
+        <article class="story-section" id="search-tool">
+            <h2>Search By Ingredient</h2>
+
+            <p>
+                <!-- Explain the search functionality -->
+                Curious about a specific ingredient or additive? Search the dataset to see where it appears.
+            </p>
+
+            <!-- Search tool container -->
+            <div class="search-tool" role="region" aria-labelledby="search-title">
+                <h3 id="search-title" class="tool-title">Ingredient Search</h3>
+                
+                <div class="search-tool__interface">
+                    <label for="ingredient-search" class="sr-only">Search for ingredient</label>
+                    <input 
+                        type="text" 
+                        id="ingredient-search" 
+                        class="search-tool__input"
+                        placeholder="Search for an ingredient (e.g., 'citric acid', 'E330')..."
+                        aria-describedby="search-help">
+                    <p id="search-help" class="search-tool__help">
+                        Type at least 3 characters to search
+                    </p>
+                </div>
+
+                <!-- Search results -->
+                <div id="search-results" class="search-tool__results" aria-live="polite">
+                    <!-- Results will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </article>
+
+        <!-- ========== VISUALIZATION 4: NETWORK VIEW ========== -->
+        <article class="story-section" id="viz-network">
+            <h2>The Network Of Ingredients</h2>
+
+            <p>
+                <!-- Introduce network visualization -->
+                Looking at ingredients as a network reveals patterns in how foods are constructed.
+            </p>
+
+            <!-- Observable embed container -->
+            <div class="observable-container" role="region" aria-labelledby="viz-network-title">
+                <h3 id="viz-network-title" class="visualization-title">Ingredient Network</h3>
+                
+                <!-- Replace with your Observable embed -->
+                <div id="observablehq-network-chart" class="observable-embed">
+                    <div class="placeholder-chart">
+                        <p>📊 Observable visualization will be embedded here</p>
+                        <p class="placeholder-instructions">
+                            Replace this div with your Observable embed code
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Text alternative -->
+                <details class="visualization-details">
+                    <summary>View data summary</summary>
+                    <p>
+                        <!-- Replace with actual findings -->
+                        Key findings: Common hubs include salt, sugar, and water. 
+                        Additives cluster around specific food categories.
+                    </p>
+                </details>
+            </div>
+        </article>
+
+        <!-- ========== INSIGHTS & CONCLUSION ========== -->
+        <article class="story-section" id="insights">
+            <h2>What This Means For Conscious Eating</h2>
+
+            <p>
+                <!-- Summarize key insights -->
+                The data reveals three important patterns:
+            </p>
+
+            <ol class="insights-list">
+                <li>
+                    <strong>Geographic differences are real:</strong> 
+                    <!-- Explain first insight -->
+                    Products with identical labels contain vastly different ingredients depending on where they're sold.
+                </li>
+                <li>
+                    <strong>Processing levels vary:</strong> 
+                    <!-- Explain second insight -->
+                    Some countries favor simpler formulations, while others embrace complexity.
+                </li>
+                <li>
+                    <strong>Transparency matters:</strong> 
+                    <!-- Explain third insight -->
+                    Understanding what we eat requires accessible, open data.
+                </li>
+            </ol>
+
+            <p>
+                <!-- Personal reflection -->
+                My health changes weren't coincidental. The "same" foods I ate in Italy and the US 
+                were fundamentally different at the ingredient level.
+            </p>
+        </article>
+
+        <!-- ========== CALL TO ACTION ========== -->
+        <article class="story-section cta-section" id="call-to-action">
+            <h2>Help Make Food Data Better</h2>
+
+            <p>
+                <!-- Explain Open Food Facts importance -->
+                This project wouldn't exist without <strong>Open Food Facts</strong>, 
+                a collaborative, free, and open database built by volunteers worldwide.
+            </p>
+
+            <div class="cta-card">
+                <h3>You Can Contribute</h3>
+                
+                <p>Every product you scan helps researchers, consumers, and projects like this one.</p>
+
+                <ol class="cta-steps">
+                    <li>Download the <a href="https://world.openfoodfacts.org/open-food-facts-mobile-app" target="_blank" rel="noopener">Open Food Facts app</a></li>
+                    <li>Scan products you buy</li>
+                    <li>Add or verify product information</li>
+                    <li>Contribute to global food transparency</li>
+                </ol>
+
+                <a href="https://world.openfoodfacts.org/contribute" 
+                   class="cta-button" 
+                   target="_blank" 
+                   rel="noopener">
+                    Start Contributing
+                </a>
+            </div>
+        </article>
+
+        <!-- ========== METHODOLOGY & CREDITS ========== -->
+        <article class="story-section" id="methodology">
+            <h2>About This Project</h2>
+
+            <h3>Methodology</h3>
+            <p>
+                Data was collected from Open Food Facts in November 2025. 
+                Over 2,000 products across 50 food categories were analyzed. 
+                Full methodology details available in the <a href="METHODOLOGY.md">methodology document</a>.
+            </p>
+
+            <h3>Credits</h3>
+            <ul>
+                <li><strong>Data Source:</strong> <a href="https://world.openfoodfacts.org/" target="_blank" rel="noopener">Open Food Facts</a> (ODbL License)</li>
+                <li><strong>Analysis & Design:</strong> avgelix</li>
+                <li><strong>Visualizations:</strong> Created with Observable Framework</li>
+            </ul>
+
+            <h3>License</h3>
+            <p>
+                Code is <a href="LICENSE">MIT Licensed</a>. 
+                Content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+            </p>
+        </article>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <p>
+            <a href="https://github.com/avgelix/what_do_you_eat" target="_blank" rel="noopener">View on GitHub</a>
+        </p>
+        <p>Building awareness, one ingredient at a time.</p>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/data-loader.js"></script>
+    <script src="scripts/comparison-tool.js"></script>
+    <script src="scripts/search.js"></script>
+
+    <!-- Observable embeds will be loaded here -->
+    <!-- Add your Observable embed scripts after implementing visualizations -->
+</body>
+</html>
