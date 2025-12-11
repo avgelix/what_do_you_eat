@@ -605,6 +605,18 @@ This project uses **dual licensing**:
 7. **Don't forget alt text**: Every image, chart, and diagram needs description
 8. **Don't block the main thread**: Use async/await for data operations
 
+## AI Assistant Guidelines
+
+When working with this project, AI assistants should:
+
+1. **Always provide functional commit messages** in conventional commits format when changes are made
+2. **Follow SDLC with Conventional Commits**: Use semantic commit messages (feat:, fix:, docs:, style:, refactor:, test:, chore:)
+3. **Commit often**: Make small, atomic commits after each logical change to maintain clear project history
+4. **Prioritize accessibility** in all suggestions
+5. **Maintain the established code style** and design patterns
+6. **Ask clarifying questions** before making architectural decisions
+7. **Suggest conventional commit messages** whenever user asks to commit or mentions committing
+
 ## Performance Considerations
 
 - Lazy-load Observable embeds (only load when scrolling into view)
