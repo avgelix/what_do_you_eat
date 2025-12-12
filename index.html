@@ -18,30 +18,43 @@
     <main id="main-content">
 
         <!-- ========== INTRODUCTION SECTION ========== -->
-        <article class="story-section" id="introduction">
-            <h5>This is a story about food and invisible differences.</h5>
+        <article class="story-section" id="introduction" style="margin-bottom: 0px;">
+            <h5>This is what breakfast often looks like in Italy, where I grew up.</h5>
             
             <p>
                 <!-- Replace with your hook: Why should readers care? -->
-                Why? Because millions of people eat what they think is the "same" food, 
-                but <span class="highlight">ingredients tell a different story</span>.
-            </p>
-
-            <p>
-                <!-- Replace with your personal story: Italy → US move -->
-                In 2021, I moved from Italy to the United States and noticed something unexpected. 
-                Despite eating the same diet, my health changed. What I discovered was...
+                Milk and cereal in a bowl,
+            <span class="highlight">(soy milk for my lactose-intolgerant friends)</span>.
             </p>
 
             <figure class="story-illustration">
-                <img src="assets/icons/countries/dot_noun-italy-6183017.svg" 
-                     alt="Illustration of a person with a suitcase standing between Italy and United States flags">
-                <figcaption>Moving across continents, eating the "same" foods</figcaption>
+                <img src="assets/images/breakfast in Italy.png" 
+                     alt="Illustration of a bowl containing milk and cereal, and the shape of the country of Italy in the background">
+                <figcaption>Breakfast in Italy, (soy) milk + cereal</figcaption>
             </figure>
 
             <p>
+                <!-- Replace with your personal story: Italy → US move -->
+                My breakfast habits did not change much since moving to the USA
+                in 2021. And while there's many other ways to have braekfast,
+                I usualy seek the milk+cereal combo where I happen to be
+                (and I always find it!)
+            </p>
+
+            <p>
+                I did not ask myself too many questions about the different milks
+                and cerelas I was consuming, until my body started demanding an answer
+                I am still desperately looking for: <em>What do you eat?</em>
+            </p>
+
+            <p>
                 <!-- Transition to the investigation -->
-                This led me to investigate: <em>How different are "identical" foods across countries?</em>
+                That same breakfast looks equally inviting regardless of where
+                in the world I am, but it is not nutritionally equivalent. 
+                As global citizens, eating consciously means understanding the 
+                <span class="highlight">invisible differences</span> that make breakfast in Italy
+                different from breakfast in Japan, even when the food in your
+                plate looks nearly identical.
             </p>
         </article>
 
@@ -54,88 +67,98 @@
         
         <!-- ========== THE SETUP: COUNTRIES & DATA ========== -->
         <article class="story-section" id="methodology-intro">
-            <h2>Five Countries. Five Continents. 50 Food Categories.</h2>
+            <h3>Everyday foods</h3>
 
             <p>
-                <!-- Explain your methodology briefly -->
-                To answer this question, I analyzed over 2,000 products from:
+                What are foods you eat regularly? Milk, bread, yogurt, pasta...
+                These are some of the most common food products worldwide.
             </p>
 
-            <!-- Country list with flags -->
+            <p style="margin-bottom: 0px;">
+               This project analyzes how the compositions of these common foods
+               differ across five countries from different continents.
+               Let's start here: how different do you think the number of ingredients in these foods could possibly
+               be in different countries?
+            </p>
+            
+        <!-- ========== VISUALIZATION 1: INGREDIENT COUNTS ========== -->
+
+            <!-- Observable embed container
+            <div class="observable-container" role="region" aria-labelledby="viz-ingredients-title"
+                 style="--embed-scale: 0.76; --embed-width: 1100px; --embed-height: 765px; --embed-margin-left: -120px;">
+                <h6 id="viz-ingredients-title" class="visualization-title">Select the food you consume the most to learn how it differs around the World.</h6>
+                
+               <iframe height="1600" frameborder="0"
+                    src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation?cells=ingredientDotsByFood"></iframe>
+            </div>-->
+
+            <!-- Observable embed container -->
+            <div class="observable-container" role="region" aria-labelledby="viz-category-title"
+                 style="margin-top: 0; --embed-scale: 1; --embed-width: 900px; --embed-height: 604px; --embed-margin-left: 0; height: 520px; overflow-y: hidden; width: 900px; margin-left: calc((680px - 900px) / 2);">
+                
+                <iframe frameborder="0"
+                      src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation@2547?cells=ingredientLadderChart"></iframe>
+            </div>
+
+
+            <!-- Text alternative for accessibility -->
+            <details class="visualization-details">
+                <summary>Methodology</summary>
+                <p>
+                   Between 1 and 20 products per food category were analyzed from each country.
+                   The visualization shows the average number of ingredients for each food category
+                   in each country.
+                </p>
+                <a href="data/products.json" download class="data-download">Download full dataset (JSON)</a>
+            </details>
+
+            <p style="margin-top: 60px">
+                <!-- Explain what the chart reveals -->
+                If that gave you a taste of what the <em>invisible differences</em> between food
+                product are, what's next will paint a fuller picture.
+            </p>
+
+           <p> 
+                I identified 50 staple foods and gathered data for each of them 
+                to understand how their composition varies all around the world.
+                In order to do this, I looked for products representing a food staple in one country from each continent.
+           </p>
+
+           <!-- Country list with flags -->
             <ul class="country-list">
                 <li>🇺🇸 <strong>United States</strong> (Americas)</li>
                 <li>🇮🇹 <strong>Italy</strong> (Europe)</li>
                 <li>🇿🇦 <strong>South Africa</strong> (Africa)</li>
                 <li>🇯🇵 <strong>Japan</strong> (Asia)</li>
                 <li>🇳🇿 <strong>New Zealand</strong> (Oceania)</li>
-            </ul>
+            </ul> 
 
             <p>
                 <!-- Mention data source -->
                 All data comes from <a href="https://world.openfoodfacts.org/" class="highlight" target="_blank" rel="noopener">Open Food Facts</a>, 
-                a free and open database of food products worldwide.
-            </p>
-        </article>
-
-        <!-- ========== VISUALIZATION 1: INGREDIENT COUNTS ========== -->
-        <article class="story-section" id="viz-ingredient-count">
-            <h2>The Same Food. Different Ingredient Lists.</h2>
-
-            <p>
-                <!-- Setup the first visualization -->
-                Let's start with something simple: How many ingredients are in common foods?
-            </p>
-
-            <!-- Observable embed container -->
-            <div class="observable-container" role="region" aria-labelledby="viz-ingredients-title"
-                 style="--embed-scale: 0.76; --embed-width: 1100px; --embed-height: 765px; --embed-margin-left: -120px;">
-                <h3 id="viz-ingredients-title" class="visualization-title">Average Ingredient Count by Country</h3>
-                
-               <iframe height="1600" frameborder="0"
-  src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation?cells=ingredientDotsByFood"></iframe>
-            </div>
-
-            <!-- Text alternative for accessibility -->
-            <details class="visualization-details">
-                <summary>View data summary</summary>
-                <p>
-                    <!-- Replace with actual findings -->
-                    Key findings: The United States products average 15 ingredients per item, 
-                    while Italy averages 8 ingredients. Japan shows the lowest with 6 ingredients on average.
-                </p>
-                <a href="data/products.json" download class="data-download">Download full dataset (JSON)</a>
-            </details>
-
-            <p>
-                <!-- Explain what the chart reveals -->
-                What this reveals is...
-            </p>
+                a free and open database of food products worldwide. While imperfect, this approach gives us a picture of how comparable an average diet is worldwide.
+            </p>   
+            
         </article>
 
         <!-- ========== VISUALIZATION 2: FOOD CATEGORY COMPLEXITY ========== -->
         <article class="story-section" id="viz-category-complexity">
-            <h2>Some Categories Are More Complex Than Others</h2>
+            <h3>Food category complexity is highly variable</h3>
 
-            <p>
+            <p style="margin-bottom: 20px;">
                 <!-- Introduce category analysis -->
-                Not all food categories are equal. Some are highly processed 
-                <img src="assets/icons/countries/dot_noun-italy-6183017.svg" alt="processed" class="inline-icon">, 
-                others remain simple.
+                Not all food categories are equal. Some are highly complex in many countries
+                <img src="assets/icons/foods/energydrink-can-svgrepo.svg" alt="complex food example: energy drink" class="inline-icon">, 
+                others remain simple in most countries <img src="assets/icons/foods/milk-bottle-svgrepo.svg" alt="relatively simple food example: whole milk" class="inline-icon">. <br> 
+                Hover over food dots to discover which ones are more complex in different countries.
             </p>
 
             <!-- Observable embed container -->
-            <div class="observable-container" role="region" aria-labelledby="viz-category-title">
-                <h3 id="viz-category-title" class="visualization-title">Food Category Complexity</h3>
+            <div class="observable-container" role="region" aria-labelledby="viz-category-title"
+                 style="margin-top:0px; --embed-scale: 1; --embed-width: 1100px; --embed-height: 763px; --embed-margin-left: 0; height: 700px; overflow-y: hidden; width: 1100px; margin-left: calc((680px - 1100px) / 2);">
                 
-                <!-- Replace with your Observable embed -->
-                <div id="observablehq-category-chart" class="observable-embed">
-                    <div class="placeholder-chart">
-                        <p>📊 Observable visualization will be embedded here</p>
-                        <p class="placeholder-instructions">
-                            Replace this div with your Observable embed code
-                        </p>
-                    </div>
-                </div>
+                <iframe frameborder="0"
+                    src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation@2480?cells=ingredientDotsByFood"></iframe>
             </div>
 
             <!-- Text alternative -->
@@ -164,18 +187,12 @@
             </p>
 
             <!-- Observable embed container -->
-            <div class="observable-container" role="region" aria-labelledby="viz-additives-title">
+            <div class="observable-container" role="region" aria-labelledby="viz-additives-title" 
+                style="--embed-scale: 1; --embed-width: 668px; --embed-height: 680px;">
                 <h3 id="viz-additives-title" class="visualization-title">Additive Usage Across Countries</h3>
                 
-                <!-- Replace with your Observable embed -->
-                <div id="observablehq-additives-chart" class="observable-embed">
-                    <div class="placeholder-chart">
-                        <p>📊 Observable visualization will be embedded here</p>
-                        <p class="placeholder-instructions">
-                            Replace this div with your Observable embed code
-                        </p>
-                    </div>
-                </div>
+                <iframe width="100%" height="668" frameborder="0"
+                    src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation?cells=ingredientPlate"></iframe>
             </div>
 
             <!-- Text alternative -->
@@ -346,20 +363,38 @@
                 Looking at ingredients as a network reveals patterns in how foods are constructed.
             </p>
 
-            <!-- Observable embed container -->
-            <div class="observable-container" role="region" aria-labelledby="viz-network-title">
+            <!-- Observable embed container
+            <div class="observable-container" role="region" aria-labelledby="viz-network-title" style="overflow: visible;">
                 <h3 id="viz-network-title" class="visualization-title">Ingredient Network</h3>
                 
-                <!-- Replace with your Observable embed -->
-                <div id="observablehq-network-chart" class="observable-embed">
-                    <div class="placeholder-chart">
-                        <p>📊 Observable visualization will be embedded here</p>
-                        <p class="placeholder-instructions">
-                            Replace this div with your Observable embed code
-                        </p>
-                    </div>
+                <div style="display: flex; gap: 8px; justify-content: center; overflow: visible;">
+                   <div style="width: 240px; height: 300px; overflow: visible;">
+                       <iframe style="width: 450px; height: 600px; border: none; transform: scale(0.5); transform-origin: top left;"
+                            src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation@2480?cells=ingredientPlate"></iframe>
+                   </div>
+                    
+                   <div style="width: 240px; height: 300px; overflow: visible;">
+                       <iframe style="width: 450px; height: 600px; border: none; transform: scale(0.5); transform-origin: top left;"
+                            src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation@2480?cells=ingredientPlate"></iframe>
+                   </div>
+                  
+                   <div style="width: 240px; height: 300px; overflow: visible;">
+                       <iframe style="width: 450px; height: 600px; border: none; transform: scale(0.5); transform-origin: top left;"
+                            src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation@2480?cells=ingredientPlate"></iframe>
+                   </div>
+                     
+                   <div style="width: 240px; height: 300px; overflow: visible;">
+                       <iframe style="width: 450px; height: 600px; border: none; transform: scale(0.5); transform-origin: top left;"
+                            src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation@2480?cells=ingredientPlate"></iframe>
+                   </div>
+                          
+                   <div style="width: 240px; height: 300px; overflow: visible;">
+                       <iframe style="width: 450px; height: 600px; border: none; transform: scale(0.5); transform-origin: top left;"
+                            src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation@2480?cells=ingredientPlate"></iframe>
+                   </div>
+                    
                 </div>
-            </div>
+            </div>-->
 
             <!-- Text alternative -->
             <details class="visualization-details">
@@ -383,17 +418,17 @@
 
             <ol class="insights-list">
                 <li>
-                    <strong>Geographic differences are real:</strong> 
+                    <strong> <img src="assets/icons/countries/dot_noun-italy-6183017.svg" alt="processed" class="inline-icon"> Geographic differences are real:</strong> 
                     <!-- Explain first insight -->
                     Products with identical labels contain vastly different ingredients depending on where they're sold.
                 </li>
                 <li>
-                    <strong>Processing levels vary:</strong> 
+                    <strong> <img src="assets/icons/countries/dot_noun-italy-6183017.svg" alt="processed" class="inline-icon"> Processing levels vary:</strong> 
                     <!-- Explain second insight -->
                     Some countries favor simpler formulations, while others embrace complexity.
                 </li>
                 <li>
-                    <strong>Transparency matters:</strong> 
+                    <strong><img src="assets/icons/countries/dot_noun-italy-6183017.svg" alt="processed" class="inline-icon"> Transparency matters:</strong> 
                     <!-- Explain third insight -->
                     Understanding what we eat requires accessible, open data.
                 </li>
@@ -401,8 +436,8 @@
 
             <p>
                 <!-- Personal reflection -->
-                My health changes weren't coincidental. The "same" foods I ate in Italy and the US 
-                were fundamentally different at the ingredient level.
+                Health changes aren't coincidental. When the "same" foods are fundamentally different at the ingredient level
+                we need to listen to our bodies and develop awareness about what we consume.
             </p>
         </article>
 
@@ -451,8 +486,8 @@
             <h3>Credits</h3>
             <ul>
                 <li><strong>Data Source:</strong> <a href="https://world.openfoodfacts.org/" target="_blank" rel="noopener">Open Food Facts</a> (ODbL License)</li>
-                <li><strong>Analysis & Design:</strong> avgelix</li>
-                <li><strong>Visualizations:</strong> Created with Observable Framework</li>
+                <li><strong>Analysis & Design:</strong> Angela Petrone</li>
+                <li><strong>Visualizations:</strong> Created by Angela Petrone in Observable</li>
             </ul>
             <br>
             <h3>License</h3>
@@ -467,9 +502,13 @@
     <!-- ==================== FOOTER ==================== -->
     <footer class="site-footer">
         <p>
+            &copy; 2025 Angela Petrone.
+        </p>
+        <p> 
             <a href="https://github.com/avgelix/what_do_you_eat" target="_blank" rel="noopener">View on GitHub</a>
         </p>
-        <p>Building awareness, one ingredient at a time.</p>
+        <p>Building aware
+            ness, one ingredient at a time.</p>
     </footer>
 
     <!-- ==================== SCRIPTS ==================== -->
@@ -477,8 +516,5 @@
     <script src="scripts/data-loader.js"></script>
     <script src="scripts/comparison-tool.js"></script>
     <script src="scripts/search.js"></script>
-
-    <!-- Observable embeds will be loaded here -->
-    <!-- Add your Observable embed scripts after implementing visualizations -->
 </body>
 </html>
