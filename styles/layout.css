@@ -61,7 +61,7 @@ main {
 /* ==================== CONTENT CONTAINERS ==================== */
 /* Observable visualization containers */
 .observable-container {
-  margin: var(--space-xl) 0;
+  margin: 0;
 }
 
 .observable-embed {

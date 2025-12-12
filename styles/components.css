@@ -429,7 +429,7 @@ select {
 
 /* Observable embed containers */
 .observable-container {
-  margin: var(--space-xl) 0;
+  margin: 0 0 var(--space-md) 0;
   width: 100%;
   position: relative;
   /* Use CSS custom properties that can be set per-embed */
