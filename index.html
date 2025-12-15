@@ -76,7 +76,7 @@
 
             <p style="margin-bottom: 0px;">
                This project analyzes how the compositions of these common foods
-               differ across five countries from different continents.
+               differ across five countries from different continents. <br> <br>
                Let's start here: how different do you think the number of ingredients in these foods could possibly
                be in different countries?
             </p>
@@ -97,7 +97,7 @@
                  style="margin-top: 0; --embed-scale: 1; --embed-width: 900px; --embed-height: 604px; --embed-margin-left: 0; height: 520px; overflow-y: hidden; width: 900px; margin-left: calc((680px - 900px) / 2);">
                 
                 <iframe frameborder="0"
-                      src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation@2547?cells=ingredientLadderChart"></iframe>
+                      src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation@2561?cells=ingredientLadderChart"></iframe>
             </div>
 
 
@@ -125,13 +125,19 @@
            </p>
 
            <!-- Country list with flags -->
-            <ul class="country-list">
+            <ul>
                 <li>🇺🇸 <strong>United States</strong> (Americas)</li>
                 <li>🇮🇹 <strong>Italy</strong> (Europe)</li>
                 <li>🇿🇦 <strong>South Africa</strong> (Africa)</li>
                 <li>🇯🇵 <strong>Japan</strong> (Asia)</li>
                 <li>🇳🇿 <strong>New Zealand</strong> (Oceania)</li>
             </ul> 
+
+            <figure class="story-illustration">
+                <img src="assets/images/worldMap.svg " 
+                     alt="Illustration of world map with highlighted countries: United States, Italy, South Africa, Japan, New Zealand">
+            </figure>
+
 
             <p>
                 <!-- Mention data source -->
@@ -143,14 +149,14 @@
 
         <!-- ========== VISUALIZATION 2: FOOD CATEGORY COMPLEXITY ========== -->
         <article class="story-section" id="viz-category-complexity">
-            <h3>Food category complexity is highly variable</h3>
+            <h3>How complex are the foods we eat?</h3>
 
             <p style="margin-bottom: 20px;">
                 <!-- Introduce category analysis -->
-                Not all food categories are equal. Some are highly complex in many countries
-                <img src="assets/icons/foods/energydrink-can-svgrepo.svg" alt="complex food example: energy drink" class="inline-icon">, 
-                others remain simple in most countries <img src="assets/icons/foods/milk-bottle-svgrepo.svg" alt="relatively simple food example: whole milk" class="inline-icon">. <br> 
-                Hover over food dots to discover which ones are more complex in different countries.
+                Not all food categories are equal. The data shows some are highly complex across all countries, like energy drinks, while
+                others stay simple overall, like whole milk. However, some food categories vary significantly between countries, 
+                most notably infant formula, ham, bread products, and cheeses. <br> <br>
+                <strong>Hover over food dots to discover which ones are more complex in different countries.</strong>
             </p>
 
             <!-- Observable embed container -->
@@ -257,7 +263,7 @@
 
         <!-- ========== INTERACTIVE TOOL: COMPARISON ========== -->
         <article class="story-section" id="comparison-tool">
-            <h2>Compare For Yourself</h2>
+            <h2>See For Yourself</h2>
 
             <p>
                 <!-- Invite readers to explore -->
