@@ -156,7 +156,7 @@
                 Not all food categories are equal. The data shows some are highly complex across all countries, like energy drinks, while
                 others stay simple overall, like whole milk. However, some food categories vary significantly between countries, 
                 most notably infant formula, ham, bread products, and cheeses. <br> <br>
-                <strong>Hover over food dots to discover which ones are more complex in different countries.</strong>
+                <strong style="font-size: 0.9rem;">Hover over the dots to learn about food complexity across countries.</strong>
             </p>
 
             <!-- Observable embed container -->
@@ -270,61 +270,13 @@
                 Want to see how specific foods compare? Use the tool below to explore the data yourself.
             </p>
 
-            <!-- Comparison tool container -->
-            <div class="comparison-tool" role="region" aria-labelledby="comparison-title">
-                <h3 id="comparison-title" class="tool-title">Product Comparison Tool</h3>
-                
-                <!-- Tool interface -->
-                <div class="comparison-tool__interface">
-                    <!-- Country selector 1 -->
-                    <div class="comparison-tool__selector">
-                        <label for="country-1">Select Country 1:</label>
-                        <select id="country-1" class="comparison-tool__dropdown">
-                            <option value="">Choose a country...</option>
-                            <option value="us">United States</option>
-                            <option value="it">Italy</option>
-                            <option value="za">South Africa</option>
-                            <option value="jp">Japan</option>
-                            <option value="nz">New Zealand</option>
-                        </select>
-                    </div>
-
-                    <!-- Country selector 2 -->
-                    <div class="comparison-tool__selector">
-                        <label for="country-2">Select Country 2:</label>
-                        <select id="country-2" class="comparison-tool__dropdown">
-                            <option value="">Choose a country...</option>
-                            <option value="us">United States</option>
-                            <option value="it">Italy</option>
-                            <option value="za">South Africa</option>
-                            <option value="jp">Japan</option>
-                            <option value="nz">New Zealand</option>
-                        </select>
-                    </div>
-
-                    <!-- Food category selector -->
-                    <div class="comparison-tool__selector">
-                        <label for="food-category">Select Food Category:</label>
-                        <select id="food-category" class="comparison-tool__dropdown">
-                            <option value="">Choose a category...</option>
-                            <option value="bread">Bread</option>
-                            <option value="yogurt">Yogurt</option>
-                            <option value="pasta">Pasta</option>
-                            <!-- Add more categories as needed -->
-                        </select>
-                    </div>
-
-                    <!-- Compare button -->
-                    <button class="comparison-tool__button" id="compare-btn">
-                        Compare Products
-                    </button>
-                </div>
-
-                <!-- Results container -->
-                <div id="comparison-results" class="comparison-tool__results" aria-live="polite">
-                    <p class="placeholder-message">Select two countries and a food category to compare products.</p>
-                </div>
-            </div>
+            <div class="observable-container" role="region" aria-labelledby="comparison-viz-title"
+                     style="--embed-scale: 1; --embed-width: 740px; --embed-height: 1000px; --embed-margin-left: 0; height: 800px; overflow-y: hidden; width: 900px; margin-left: calc((680px - 700px) / 2);">
+                    <h3 id="comparison-viz-title" class="visualization-title">  Compare Products Across Countries</h3>
+                    
+                    <iframe frameborder="0" height= "1000px"
+                            src="https://observablehq.com/embed/@data-explainers-fall-25/apetrone-food-data-process-documentation@2611?cells=productComparisonTool"></iframe>
+             </div>
         </article>
 
         <!-- ========== INTERACTIVE TOOL: SEARCH ========== -->
