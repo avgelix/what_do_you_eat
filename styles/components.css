@@ -231,6 +231,7 @@ select {
   border-radius: var(--border-radius-lg);
   border: 2px solid var(--color-accent);
   margin: var(--space-lg) 0;
+  text-align: center;
 }
 
 .cta-card h3 {
